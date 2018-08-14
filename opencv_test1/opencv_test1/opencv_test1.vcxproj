@@ -75,8 +75,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <LibraryPath>D:\Program Files\ZBar\lib;D:\opencv_leane\sdk\x64\vc14\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>D:\Program Files %28x86%29\ZBar\include\zbar;D:\Program Files %28x86%29\ZBar\include;D:\opencv_leane\sdk\include;D:\opencv_leane\sdk\include\opencv2;D:\opencv_leane\sdk\include\opencv;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>F:\gitbup\alg_learn\opencv_test1\DirectShow\Lib\x64;F:\gitbup\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64;D:\Program Files\ZBar\lib;D:\opencv_leane\sdk\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>F:\gitbup\alg_learn\opencv_test1\DirectShow\Include;F:\gitbup\include;D:\Program Files %28x86%29\ZBar\include\zbar;D:\Program Files %28x86%29\ZBar\include;D:\opencv_leane\sdk\include;D:\opencv_leane\sdk\include\opencv2;D:\opencv_leane\sdk\include\opencv;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ReferencePath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64;D:\opencv_leane\dlib\result\dlib\Debug;D:\opencv_leane\dlib\dlib-19.7;$(VC_ReferencesPath_x64)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -102,14 +103,20 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DLIB_JPEG _SUPPORT;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\gitbup\dlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libzbar64-0.lib;opencv_aruco331d.lib;opencv_bgsegm331d.lib;opencv_bioinspired331d.lib;opencv_calib3d331d.lib;opencv_ccalib331d.lib;opencv_core331d.lib;opencv_cudaarithm331d.lib;opencv_cudabgsegm331d.lib;opencv_cudacodec331d.lib;opencv_cudafeatures2d331d.lib;opencv_cudafilters331d.lib;opencv_cudaimgproc331d.lib;opencv_cudalegacy331d.lib;opencv_cudaobjdetect331d.lib;opencv_cudaoptflow331d.lib;opencv_cudastereo331d.lib;opencv_cudawarping331d.lib;opencv_cudev331d.lib;opencv_datasets331d.lib;opencv_dnn331d.lib;opencv_dpm331d.lib;opencv_face331d.lib;opencv_features2d331d.lib;opencv_flann331d.lib;opencv_fuzzy331d.lib;opencv_highgui331d.lib;opencv_imgcodecs331d.lib;opencv_imgproc331d.lib;opencv_img_hash331d.lib;opencv_line_descriptor331d.lib;opencv_ml331d.lib;opencv_objdetect331d.lib;opencv_optflow331d.lib;opencv_phase_unwrapping331d.lib;opencv_photo331d.lib;opencv_plot331d.lib;opencv_reg331d.lib;opencv_rgbd331d.lib;opencv_saliency331d.lib;opencv_shape331d.lib;opencv_stereo331d.lib;opencv_stitching331d.lib;opencv_structured_light331d.lib;opencv_superres331d.lib;opencv_surface_matching331d.lib;opencv_text331d.lib;opencv_tracking331d.lib;opencv_video331d.lib;opencv_videoio331d.lib;opencv_videostab331d.lib;opencv_xfeatures2d331d.lib;opencv_ximgproc331d.lib;opencv_xobjdetect331d.lib;opencv_xphoto331d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>strmiids.lib;quartz.lib;msdmo.lib;ksuser.lib;ksproxy.lib;dmoguids.lib;amstrmid.lib;dlib.lib;giflib.lib;libjpeg.lib;liblept.lib;libpng.lib;libtesseract.lib;libtiff.lib;openjpeg.lib;tesseract.lib;zlib.lib;cublas.lib;cublas_device.lib;cuda.lib;cudadevrt.lib;cudart.lib;cudart_static.lib;cudnn.lib;cufft.lib;cufftw.lib;curand.lib;cusolver.lib;cusparse.lib;nppc.lib;nppi.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;nvblas.lib;nvcuvid.lib;nvgraph.lib;nvml.lib;nvrtc.lib;OpenCL.lib;libzbar64-0.lib;opencv_aruco331d.lib;opencv_bgsegm331d.lib;opencv_bioinspired331d.lib;opencv_calib3d331d.lib;opencv_ccalib331d.lib;opencv_core331d.lib;opencv_cudaarithm331d.lib;opencv_cudabgsegm331d.lib;opencv_cudacodec331d.lib;opencv_cudafeatures2d331d.lib;opencv_cudafilters331d.lib;opencv_cudaimgproc331d.lib;opencv_cudalegacy331d.lib;opencv_cudaobjdetect331d.lib;opencv_cudaoptflow331d.lib;opencv_cudastereo331d.lib;opencv_cudawarping331d.lib;opencv_cudev331d.lib;opencv_datasets331d.lib;opencv_dnn331d.lib;opencv_dpm331d.lib;opencv_face331d.lib;opencv_features2d331d.lib;opencv_flann331d.lib;opencv_fuzzy331d.lib;opencv_highgui331d.lib;opencv_imgcodecs331d.lib;opencv_imgproc331d.lib;opencv_img_hash331d.lib;opencv_line_descriptor331d.lib;opencv_ml331d.lib;opencv_objdetect331d.lib;opencv_optflow331d.lib;opencv_phase_unwrapping331d.lib;opencv_photo331d.lib;opencv_plot331d.lib;opencv_reg331d.lib;opencv_rgbd331d.lib;opencv_saliency331d.lib;opencv_shape331d.lib;opencv_stereo331d.lib;opencv_stitching331d.lib;opencv_structured_light331d.lib;opencv_superres331d.lib;opencv_surface_matching331d.lib;opencv_text331d.lib;opencv_tracking331d.lib;opencv_video331d.lib;opencv_videoio331d.lib;opencv_videostab331d.lib;opencv_xfeatures2d331d.lib;opencv_ximgproc331d.lib;opencv_xobjdetect331d.lib;opencv_xphoto331d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/verbose:lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>F:\gitbup\dlib\dlib\build\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -150,12 +157,23 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CameraDS.h" />
+    <ClInclude Include="cor\BrowseDir.h" />
+    <ClInclude Include="cor\StatDir.h" />
     <ClInclude Include="GC2Inpaint.h" />
+    <ClInclude Include="cor\GoOcrHelper.h" />
     <ClInclude Include="tools.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CameraDS.cpp" />
+    <ClCompile Include="cor\BrowseDir.cpp" />
+    <ClCompile Include="cor\find2.cpp" />
+    <ClCompile Include="cor\StatDir.cpp" />
+    <ClCompile Include="cor\testorc.cpp" />
+    <ClCompile Include="cor\GoOcrHelper.cpp" />
+    <ClCompile Include="liner_distance.cpp" />
     <ClCompile Include="opencv_test1.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
